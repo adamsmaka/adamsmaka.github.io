@@ -1,46 +1,388 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>The Architect App Support</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support page for The Architect App - AI voice memo organizer">
     <style>
-        body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; }
-        h1 { color: #333; }
-        .contact { background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; 
+            max-width: 600px; 
+            margin: 50px auto; 
+            padding: 20px; 
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 { 
+            color: #2c3e50; 
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        .contact { 
+            background: #f8f9fa; 
+            padding: 20px; 
+            border-radius: 8px; 
+            margin: 20px 0; 
+            border-left: 4px solid #3498db;
+        }
+        .lang-selector {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #ecf0f1;
+            border-radius: 8px;
+        }
+        .lang-selector button {
+            margin: 5px;
+            padding: 8px 16px;
+            border: none;
+            background: #3498db;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .lang-selector button:hover {
+            background: #2980b9;
+        }
+        .lang-selector button.active {
+            background: #2c3e50;
+        }
+        .lang-content {
+            display: none;
+        }
+        .lang-content.active {
+            display: block;
+        }
+        ul {
+            background: #f8f9fa;
+            padding: 20px 20px 20px 40px;
+            border-radius: 8px;
+        }
+        li {
+            margin: 10px 0;
+        }
+        small {
+            color: #7f8c8d;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <h1>The Architect App Support</h1>
-    
-    <p>Need help with The Architect App? We're here to assist you!</p>
-    
-    <div class="contact">
-        <h2>Contact Information</h2>
-        <p><strong>Email:</strong> adam@smaka.dev</p>
-        <p><strong>Response Time:</strong> Within 24-48 hours</p>
+    <!-- Language Selector -->
+    <div class="lang-selector">
+        <button onclick="setLanguage('en')" id="btn-en" class="active">English</button>
+        <button onclick="setLanguage('ja')" id="btn-ja">日本語</button>
+        <button onclick="setLanguage('es')" id="btn-es">Español</button>
+        <button onclick="setLanguage('de')" id="btn-de">Deutsch</button>
+        <button onclick="setLanguage('fr')" id="btn-fr">Français</button>
+        <button onclick="setLanguage('it')" id="btn-it">Italiano</button>
+        <button onclick="setLanguage('pl')" id="btn-pl">Polski</button>
     </div>
-    
-    <h2>Common Issues</h2>
-    <ul>
-        <li><strong>Audio recording problems:</strong> Check microphone permissions in device settings</li>
-        <li><strong>Sync issues:</strong> Ensure you're signed in and have internet connection</li>
-        <li><strong>Account problems:</strong> Contact us via email above</li>
-    </ul>
-    
-    <h2>Feature Requests</h2>
-    <p>Have an idea for improving The Architect App? Send us your suggestions at the email above.</p>
 
-    <h2>Delete Account & Data</h2>
-    <p>If you want to delete your account and all associated data in <strong>The Architect App</strong>, please send an email to:</p>
-    <p><strong>Email:</strong> adam@smaka.dev</p>
-    <p>In the subject line, write: <em>Delete account</em>, and include the email address linked to your account.</p>
-    <p>Once we receive your request:</p>
-    <ul>
-        <li>Your account and all associated data will be permanently deleted within 30 days.</li>
-        <li>Data required for legal or billing purposes (e.g., payment history) may be retained as required by law.</li>
-    </ul>
+    <!-- English Content -->
+    <div id="content-en" class="lang-content active">
+        <h1>The Architect App Support</h1>
+        
+        <p>Need help with The Architect App? We're here to assist you!</p>
+        
+        <div class="contact">
+            <h2>Contact Information</h2>
+            <p><strong>Email:</strong> <a href="mailto:adam@smaka.dev">adam@smaka.dev</a></p>
+            <p><strong>Response Time:</strong> Within 24-48 hours</p>
+        </div>
+        
+        <h2>Common Issues</h2>
+        <ul>
+            <li><strong>Audio recording problems:</strong> Check microphone permissions in device settings</li>
+            <li><strong>Sync issues:</strong> Ensure you're signed in and have internet connection</li>
+            <li><strong>Transcription errors:</strong> Make sure you're speaking clearly and check language settings</li>
+            <li><strong>Account problems:</strong> Contact us via email above</li>
+        </ul>
+        
+        <h2>Feature Requests</h2>
+        <p>Have an idea for improving The Architect App? Send us your suggestions at the email above.</p>
 
-    <p><small>Last updated: September 2025</small></p>
+        <h2>Delete Account & Data</h2>
+        <p>If you want to delete your account and all associated data in <strong>The Architect App</strong>, please send an email to:</p>
+        <p><strong>Email:</strong> <a href="mailto:adam@smaka.dev?subject=Delete account">adam@smaka.dev</a></p>
+        <p>In the subject line, write: <em>Delete account</em>, and include the email address linked to your account.</p>
+        <p>Once we receive your request:</p>
+        <ul>
+            <li>Your account and all associated data will be permanently deleted within 30 days.</li>
+            <li>Data required for legal or billing purposes (e.g., payment history) may be retained as required by law.</li>
+        </ul>
+
+        <p><small>Last updated: September 2025</small></p>
+    </div>
+
+    <!-- Japanese Content -->
+    <div id="content-ja" class="lang-content">
+        <h1>The Architect アプリサポート</h1>
+        
+        <p>The Architectアプリでお困りですか？お手伝いいたします！</p>
+        
+        <div class="contact">
+            <h2>お問い合わせ先</h2>
+            <p><strong>メール:</strong> <a href="mailto:adam@smaka.dev">adam@smaka.dev</a></p>
+            <p><strong>返信時間:</strong> 24〜48時間以内</p>
+        </div>
+        
+        <h2>よくある問題</h2>
+        <ul>
+            <li><strong>音声録音の問題:</strong> デバイス設定でマイクの権限を確認してください</li>
+            <li><strong>同期の問題:</strong> サインインしていること、インターネット接続があることを確認してください</li>
+            <li><strong>文字起こしエラー:</strong> はっきりと話し、言語設定を確認してください</li>
+            <li><strong>アカウントの問題:</strong> 上記のメールでお問い合わせください</li>
+        </ul>
+        
+        <h2>機能リクエスト</h2>
+        <p>The Architectアプリを改善するアイデアがありますか？上記のメールでご提案をお送りください。</p>
+
+        <h2>アカウントとデータの削除</h2>
+        <p><strong>The Architectアプリ</strong>のアカウントと関連するすべてのデータを削除したい場合は、以下にメールをお送りください：</p>
+        <p><strong>メール:</strong> <a href="mailto:adam@smaka.dev?subject=Delete account">adam@smaka.dev</a></p>
+        <p>件名に「<em>Delete account</em>」と記載し、アカウントに関連付けられているメールアドレスを含めてください。</p>
+        <p>リクエストを受信した後：</p>
+        <ul>
+            <li>アカウントと関連するすべてのデータは30日以内に完全に削除されます。</li>
+            <li>法的または請求目的で必要なデータ（支払い履歴など）は、法律で要求される場合に保持される場合があります。</li>
+        </ul>
+
+        <p><small>最終更新：2025年9月</small></p>
+    </div>
+
+    <!-- Spanish Content -->
+    <div id="content-es" class="lang-content">
+        <h1>Soporte de The Architect App</h1>
+        
+        <p>¿Necesitas ayuda con The Architect App? ¡Estamos aquí para asistirte!</p>
+        
+        <div class="contact">
+            <h2>Información de Contacto</h2>
+            <p><strong>Correo:</strong> <a href="mailto:adam@smaka.dev">adam@smaka.dev</a></p>
+            <p><strong>Tiempo de Respuesta:</strong> Dentro de 24-48 horas</p>
+        </div>
+        
+        <h2>Problemas Comunes</h2>
+        <ul>
+            <li><strong>Problemas de grabación de audio:</strong> Verifica los permisos del micrófono en la configuración del dispositivo</li>
+            <li><strong>Problemas de sincronización:</strong> Asegúrate de haber iniciado sesión y tener conexión a internet</li>
+            <li><strong>Errores de transcripción:</strong> Asegúrate de hablar claramente y verifica la configuración de idioma</li>
+            <li><strong>Problemas de cuenta:</strong> Contáctanos por correo arriba</li>
+        </ul>
+        
+        <h2>Solicitudes de Funciones</h2>
+        <p>¿Tienes una idea para mejorar The Architect App? Envíanos tus sugerencias al correo anterior.</p>
+
+        <h2>Eliminar Cuenta y Datos</h2>
+        <p>Si deseas eliminar tu cuenta y todos los datos asociados en <strong>The Architect App</strong>, envía un correo a:</p>
+        <p><strong>Correo:</strong> <a href="mailto:adam@smaka.dev?subject=Delete account">adam@smaka.dev</a></p>
+        <p>En el asunto, escribe: <em>Delete account</em>, e incluye la dirección de correo vinculada a tu cuenta.</p>
+        <p>Una vez que recibamos tu solicitud:</p>
+        <ul>
+            <li>Tu cuenta y todos los datos asociados se eliminarán permanentemente dentro de 30 días.</li>
+            <li>Los datos requeridos para fines legales o de facturación (ej. historial de pagos) pueden conservarse según lo requiera la ley.</li>
+        </ul>
+
+        <p><small>Última actualización: Septiembre 2025</small></p>
+    </div>
+
+    <!-- German Content -->
+    <div id="content-de" class="lang-content">
+        <h1>The Architect App Support</h1>
+        
+        <p>Benötigen Sie Hilfe mit der The Architect App? Wir sind hier, um Ihnen zu helfen!</p>
+        
+        <div class="contact">
+            <h2>Kontaktinformationen</h2>
+            <p><strong>E-Mail:</strong> <a href="mailto:adam@smaka.dev">adam@smaka.dev</a></p>
+            <p><strong>Antwortzeit:</strong> Innerhalb von 24-48 Stunden</p>
+        </div>
+        
+        <h2>Häufige Probleme</h2>
+        <ul>
+            <li><strong>Audioaufnahmeprobleme:</strong> Überprüfen Sie die Mikrofonberechtigungen in den Geräteeinstellungen</li>
+            <li><strong>Synchronisierungsprobleme:</strong> Stellen Sie sicher, dass Sie angemeldet sind und eine Internetverbindung haben</li>
+            <li><strong>Transkriptionsfehler:</strong> Sprechen Sie deutlich und überprüfen Sie die Spracheinstellungen</li>
+            <li><strong>Kontoprobleme:</strong> Kontaktieren Sie uns über die obige E-Mail</li>
+        </ul>
+        
+        <h2>Funktionsanfragen</h2>
+        <p>Haben Sie eine Idee zur Verbesserung der The Architect App? Senden Sie uns Ihre Vorschläge an die obige E-Mail.</p>
+
+        <h2>Konto und Daten löschen</h2>
+        <p>Wenn Sie Ihr Konto und alle zugehörigen Daten in <strong>The Architect App</strong> löschen möchten, senden Sie bitte eine E-Mail an:</p>
+        <p><strong>E-Mail:</strong> <a href="mailto:adam@smaka.dev?subject=Delete account">adam@smaka.dev</a></p>
+        <p>Schreiben Sie in die Betreffzeile: <em>Delete account</em>, und fügen Sie die mit Ihrem Konto verknüpfte E-Mail-Adresse hinzu.</p>
+        <p>Sobald wir Ihre Anfrage erhalten:</p>
+        <ul>
+            <li>Ihr Konto und alle zugehörigen Daten werden innerhalb von 30 Tagen dauerhaft gelöscht.</li>
+            <li>Daten, die für rechtliche oder Abrechnungszwecke erforderlich sind (z.B. Zahlungsverlauf), können gemäß gesetzlichen Anforderungen aufbewahrt werden.</li>
+        </ul>
+
+        <p><small>Zuletzt aktualisiert: September 2025</small></p>
+    </div>
+
+    <!-- French Content -->
+    <div id="content-fr" class="lang-content">
+        <h1>Support The Architect App</h1>
+        
+        <p>Besoin d'aide avec The Architect App ? Nous sommes là pour vous aider !</p>
+        
+        <div class="contact">
+            <h2>Informations de Contact</h2>
+            <p><strong>Email :</strong> <a href="mailto:adam@smaka.dev">adam@smaka.dev</a></p>
+            <p><strong>Temps de Réponse :</strong> Dans les 24-48 heures</p>
+        </div>
+        
+        <h2>Problèmes Courants</h2>
+        <ul>
+            <li><strong>Problèmes d'enregistrement audio :</strong> Vérifiez les permissions du microphone dans les paramètres de l'appareil</li>
+            <li><strong>Problèmes de synchronisation :</strong> Assurez-vous d'être connecté et d'avoir une connexion Internet</li>
+            <li><strong>Erreurs de transcription :</strong> Assurez-vous de parler clairement et vérifiez les paramètres de langue</li>
+            <li><strong>Problèmes de compte :</strong> Contactez-nous via l'email ci-dessus</li>
+        </ul>
+        
+        <h2>Demandes de Fonctionnalités</h2>
+        <p>Vous avez une idée pour améliorer The Architect App ? Envoyez-nous vos suggestions à l'email ci-dessus.</p>
+
+        <h2>Supprimer le Compte et les Données</h2>
+        <p>Si vous souhaitez supprimer votre compte et toutes les données associées dans <strong>The Architect App</strong>, veuillez envoyer un email à :</p>
+        <p><strong>Email :</strong> <a href="mailto:adam@smaka.dev?subject=Delete account">adam@smaka.dev</a></p>
+        <p>Dans l'objet, écrivez : <em>Delete account</em>, et incluez l'adresse email liée à votre compte.</p>
+        <p>Une fois que nous recevons votre demande :</p>
+        <ul>
+            <li>Votre compte et toutes les données associées seront définitivement supprimés dans les 30 jours.</li>
+            <li>Les données requises à des fins légales ou de facturation (ex. historique de paiement) peuvent être conservées conformément à la loi.</li>
+        </ul>
+
+        <p><small>Dernière mise à jour : Septembre 2025</small></p>
+    </div>
+
+    <!-- Italian Content -->
+    <div id="content-it" class="lang-content">
+        <h1>Supporto The Architect App</h1>
+        
+        <p>Hai bisogno di aiuto con The Architect App? Siamo qui per assisterti!</p>
+        
+        <div class="contact">
+            <h2>Informazioni di Contatto</h2>
+            <p><strong>Email:</strong> <a href="mailto:adam@smaka.dev">adam@smaka.dev</a></p>
+            <p><strong>Tempo di Risposta:</strong> Entro 24-48 ore</p>
+        </div>
+        
+        <h2>Problemi Comuni</h2>
+        <ul>
+            <li><strong>Problemi di registrazione audio:</strong> Controlla i permessi del microfono nelle impostazioni del dispositivo</li>
+            <li><strong>Problemi di sincronizzazione:</strong> Assicurati di aver effettuato l'accesso e di avere una connessione internet</li>
+            <li><strong>Errori di trascrizione:</strong> Assicurati di parlare chiaramente e controlla le impostazioni della lingua</li>
+            <li><strong>Problemi dell'account:</strong> Contattaci via email sopra</li>
+        </ul>
+        
+        <h2>Richieste di Funzionalità</h2>
+        <p>Hai un'idea per migliorare The Architect App? Inviaci i tuoi suggerimenti all'email sopra.</p>
+
+        <h2>Elimina Account e Dati</h2>
+        <p>Se vuoi eliminare il tuo account e tutti i dati associati in <strong>The Architect App</strong>, invia un'email a:</p>
+        <p><strong>Email:</strong> <a href="mailto:adam@smaka.dev?subject=Delete account">adam@smaka.dev</a></p>
+        <p>Nell'oggetto, scrivi: <em>Delete account</em>, e includi l'indirizzo email collegato al tuo account.</p>
+        <p>Una volta ricevuta la tua richiesta:</p>
+        <ul>
+            <li>Il tuo account e tutti i dati associati verranno eliminati permanentemente entro 30 giorni.</li>
+            <li>I dati richiesti per scopi legali o di fatturazione (es. cronologia pagamenti) possono essere conservati come richiesto dalla legge.</li>
+        </ul>
+
+        <p><small>Ultimo aggiornamento: Settembre 2025</small></p>
+    </div>
+
+    <!-- Polish Content -->
+    <div id="content-pl" class="lang-content">
+        <h1>Pomoc The Architect App</h1>
+        
+        <p>Potrzebujesz pomocy z aplikacją The Architect? Jesteśmy tutaj, aby Ci pomóc!</p>
+        
+        <div class="contact">
+            <h2>Informacje Kontaktowe</h2>
+            <p><strong>Email:</strong> <a href="mailto:adam@smaka.dev">adam@smaka.dev</a></p>
+            <p><strong>Czas Odpowiedzi:</strong> W ciągu 24-48 godzin</p>
+        </div>
+        
+        <h2>Częste Problemy</h2>
+        <ul>
+            <li><strong>Problemy z nagrywaniem audio:</strong> Sprawdź uprawnienia mikrofonu w ustawieniach urządzenia</li>
+            <li><strong>Problemy z synchronizacją:</strong> Upewnij się, że jesteś zalogowany i masz połączenie z internetem</li>
+            <li><strong>Błędy transkrypcji:</strong> Upewnij się, że mówisz wyraźnie i sprawdź ustawienia języka</li>
+            <li><strong>Problemy z kontem:</strong> Skontaktuj się z nami poprzez email podany wyżej</li>
+        </ul>
+        
+        <h2>Prośby o Nowe Funkcje</h2>
+        <p>Masz pomysł na ulepszenie aplikacji The Architect? Wyślij nam swoje sugestie na powyższy email.</p>
+
+        <h2>Usuwanie Konta i Danych</h2>
+        <p>Jeśli chcesz usunąć swoje konto i wszystkie powiązane dane w <strong>aplikacji The Architect</strong>, wyślij email na:</p>
+        <p><strong>Email:</strong> <a href="mailto:adam@smaka.dev?subject=Delete account">adam@smaka.dev</a></p>
+        <p>W temacie napisz: <em>Delete account</em>, i podaj adres email powiązany z Twoim kontem.</p>
+        <p>Po otrzymaniu Twojej prośby:</p>
+        <ul>
+            <li>Twoje konto i wszystkie powiązane dane zostaną trwale usunięte w ciągu 30 dni.</li>
+            <li>Dane wymagane do celów prawnych lub rozliczeniowych (np. historia płatności) mogą zostać zachowane zgodnie z wymogami prawa.</li>
+        </ul>
+
+        <p><small>Ostatnia aktualizacja: Wrzesień 2025</small></p>
+    </div>
+
+    <script>
+        function setLanguage(lang) {
+            // Hide all language contents
+            const contents = document.querySelectorAll('.lang-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.lang-selector button');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            // Show selected language content
+            document.getElementById('content-' + lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+            
+            // Set HTML lang attribute
+            document.documentElement.lang = lang;
+            
+            // Save preference to localStorage
+            localStorage.setItem('preferredLanguage', lang);
+        }
+        
+        // Load saved language preference or detect from browser
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            const browserLang = navigator.language.substring(0, 2);
+            const supportedLangs = ['en', 'ja', 'es', 'de', 'fr', 'it', 'pl'];
+            
+            let defaultLang = 'en';
+            if (savedLang && supportedLangs.includes(savedLang)) {
+                defaultLang = savedLang;
+            } else if (supportedLangs.includes(browserLang)) {
+                defaultLang = browserLang;
+            }
+            
+            setLanguage(defaultLang);
+        });
+    </script>
 </body>
 </html>
