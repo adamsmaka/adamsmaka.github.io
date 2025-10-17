@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify BPM Analyzer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        
+        .music-icon {
+            font-size: 60px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .powered-by {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+        
+        .powered-by h2 {
+            color: #333;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+        
+        .cta-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white !important;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-size: 1.1em;
+            transition: transform 0.3s ease;
+        }
+        
+        .cta-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            text-decoration: none;
+        }
+        
+        .info {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .info strong {
+            color: #0077cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="music-icon">🎵</div>
+        
+        <h1>Spotify Playlist BPM Analyzer</h1>
+        
+        <p>
+            This is a personal project for analyzing BPM (Beats Per Minute) of songs 
+            from Spotify playlists. The tool helps musicians, DJs, and music enthusiasts 
+            discover the tempo of their favorite tracks.
+        </p>
+        
+        <div class="powered-by">
+            <h2>Powered by GetSongBPM</h2>
+            <p>
+                This project uses the <a href="https://getsongbpm.com" target="_blank">GetSongBPM.com</a> 
+                API to retrieve accurate BPM data for songs. GetSongBPM is an excellent resource 
+                for finding tempo and key information for millions of tracks.
+            </p>
+            <p>
+                <strong>Check out GetSongBPM:</strong> They offer a comprehensive database 
+                of song tempos and musical keys, perfect for DJs, musicians, and music lovers.
+            </p>
+            
+            <a href="https://getsongbpm.com" class="cta-link" target="_blank">
+                Visit GetSongBPM.com →
+            </a>
+        </div>
+        
+        <div class="info">
+            <strong>About this project:</strong> A Python-based tool that extracts BPM 
+            information from Spotify playlists using the Spotify API and GetSongBPM API.
+        </div>
+        
+        <p style="margin-top: 30px; text-align: center; color: #999; font-size: 0.9em;">
+            Created by Adam Smaka | Personal Project 2025
+        </p>
+    </div>
+</body>
+</html>
