@@ -342,15 +342,36 @@
             background: var(--bg-light);
             font-weight: bold;
             cursor: pointer;
+            position: relative;
+            padding-right: 50px;
+        }
+        
+        .faq-question:hover {
+            background: #e8e8e8;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: var(--primary);
+        }
+        
+        .faq-item.active .faq-question::after {
+            content: '−';
         }
         
         .faq-answer {
             padding: 20px;
             background: white;
             display: none;
+            line-height: 1.6;
         }
         
-        .faq-item:target .faq-answer {
+        .faq-item.active .faq-answer {
             display: block;
         }
         
@@ -507,7 +528,7 @@
                 Jeśli znowu leżysz, scrollujesz telefon do 5 rano<br>
                 i liczysz ile godzin zostało do budzika...
             </p>
-            <p style="font-size: 20px; opacity: 0.95;">Ten 21-dniowy plan awaryjny zmieni wszystko</p>
+            <p style="font-size: 20px; opacity: 0.95; margin-bottom: 40px;">Ten 21-dniowy plan awaryjny zmieni wszystko</p>
             <a href="https://smaka.lemonsqueezy.com/buy/8062e288-e1df-4101-b37b-5a7ca75dbd9d" class="cta-button">Zaczynam dziś wieczór bez paniki →</a>
         </div>
     </section>
@@ -851,42 +872,42 @@
         <div class="container">
             <h2>Najczęściej zadawane pytania:</h2>
             
-            <div class="faq-item" id="faq1">
+            <div class="faq-item">
                 <div class="faq-question">Q: Co jeśli u mnie to nie zadziała?</div>
                 <div class="faq-answer">A: Protokół ma 30-dniową gwarancję. Jeśli po uczciwie stosowanych technikach przez 21 dni nie zobaczysz poprawy, zwracam 100% wpłaty.</div>
             </div>
             
-            <div class="faq-item" id="faq2">
+            <div class="faq-item">
                 <div class="faq-question">Q: Czy to zastąpi leki które biorę?</div>
                 <div class="faq-answer">A: Nie, Protokół można stosować równolegle z lekami. Nie musisz nic odstawiać. Z czasem możesz potrzebować ich mniej, ale to decyzja Twoja i lekarza.</div>
             </div>
             
-            <div class="faq-item" id="faq3">
+            <div class="faq-item">
                 <div class="faq-question">Q: Ile czasu dziennie muszę na to poświęcić?</div>
                 <div class="faq-answer">A: Czytanie: 15-20 minut dziennie przez pierwszy tydzień. Stosowanie technik: robisz je gdy się budzisz w nocy, więc nie zabierają dodatkowego czasu.</div>
             </div>
             
-            <div class="faq-item" id="faq4">
+            <div class="faq-item">
                 <div class="faq-question">Q: Co jeśli budzę się o innej godzinie niż 3AM?</div>
                 <div class="faq-answer">A: Protokół działa na każde nocne przebudzenie między 2-5 rano. Mechanizm jest ten sam.</div>
             </div>
             
-            <div class="faq-item" id="faq5">
+            <div class="faq-item">
                 <div class="faq-question">Q: Czy jest wersja drukowana?</div>
                 <div class="faq-answer">A: Nie, tylko PDF. Ale możesz go wydrukować sama. Bonus "Kryzysowa Ściąga" jest specjalnie sformatowana do druku.</div>
             </div>
             
-            <div class="faq-item" id="faq6">
+            <div class="faq-item">
                 <div class="faq-question">Q: Próbowałam już wszystkiego. Dlaczego to miałoby zadziałać?</div>
                 <div class="faq-answer">A: Bo inne metody próbują ZAPOBIEC przebudzeniu o 3AM. Protokół 3AM zakłada, że BĘDZIESZ się budzić i daje Ci konkretne instrukcje CO ROBIĆ gdy to się stanie. To jak instrukcja obsługi awarii - krok po kroku, bez paniki, bez zgadywania. 53% naszych klientek miało problem 5+ lat i właśnie u nich widzimy najlepsze rezultaty.</div>
             </div>
             
-            <div class="faq-item" id="faq7">
+            <div class="faq-item">
                 <div class="faq-question">Q: Mam bezsenność 10+ lat. To na pewno nie zadziała u mnie.</div>
                 <div class="faq-answer">A: 53% naszych klientek miało problem 5+ lat. Protokół działa właśnie dlatego, że NIE próbuje "wyleczyć" bezsenności, tylko uczy z nią współpracować. Zamiast walczyć z 3AM, uczysz się wykorzystać to okno czasowe.</div>
             </div>
             
-            <div class="faq-item" id="faq8">
+            <div class="faq-item">
                 <div class="faq-question">Q: Nie mam siły na skomplikowany program.</div>
                 <div class="faq-answer">A: Pierwszego wieczora musisz tylko przeczytać 3 strony i zastosować technikę 4-7-8. To 5 minut. Reszta przyjdzie sama. 94% kobiet czyta cały protokół pierwszego wieczora - bo jest napisany prostym językiem.</div>
             </div>
@@ -915,19 +936,19 @@
         <div class="container">
             <h2>Ile jeszcze nocy chcesz spędzić patrząc w sufit o 3 rano?</h2>
             
-            <div style="background: white; padding: 30px; border-radius: 12px; margin: 30px auto; max-width: 600px;">
+            <div style="background: rgba(255,255,255,0.95); padding: 30px; border-radius: 12px; margin: 30px auto; max-width: 600px;">
                 <p style="font-size: 22px; font-weight: bold; color: #333; margin-bottom: 20px;">TWOJA NOC TERAZ → TWOJA NOC ZA 21 DNI</p>
-                <div style="text-align: left; font-size: 18px;">
-                    <p>😔 3:00 - oczy otwarte → 😴 3:00 - śpisz</p>
-                    <p>😟 3:42 - scrollujesz → 😴 3:42 - śpisz</p>
-                    <p>😫 4:15 - panika → 😴 4:15 - śpisz</p>
-                    <p>😵 6:00 - zombie → 😊 6:00 - wypoczęta</p>
+                <div style="text-align: left; font-size: 18px; color: #333;">
+                    <p style="color: #333;">😔 3:00 - oczy otwarte → 😴 3:00 - śpisz</p>
+                    <p style="color: #333;">😟 3:42 - scrollujesz → 😴 3:42 - śpisz</p>
+                    <p style="color: #333;">😫 4:15 - panika → 😴 4:15 - śpisz</p>
+                    <p style="color: #333;">😵 6:00 - zombie → 😊 6:00 - wypoczęta</p>
                 </div>
             </div>
             
-            <p style="font-size: 24px; font-weight: bold; margin: 30px 0;">Co wybierasz?</p>
+            <p style="font-size: 24px; font-weight: bold; margin: 30px 0; color: white;">Co wybierasz?</p>
             <a href="https://smaka.lemonsqueezy.com/buy/8062e288-e1df-4101-b37b-5a7ca75dbd9d" class="cta-button">Pobieram mój Protokół (dostęp za 2 minuty) →</a>
-            <p style="margin-top: 20px; opacity: 0.9;">Bezpieczna płatność • Natychmiastowy dostęp • 30 dni gwarancji</p>
+            <p style="margin-top: 20px; opacity: 0.9; color: white;">Bezpieczna płatność • Natychmiastowy dostęp • 30 dni gwarancji</p>
         </div>
     </section>
     
@@ -1004,6 +1025,27 @@
         // Uruchom timer
         updateTimer();
         setInterval(updateTimer, 1000);
+        
+        // FAQ Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.parentElement;
+                    
+                    // Zamknij wszystkie inne FAQ
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        if (item !== faqItem) {
+                            item.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle aktualny FAQ
+                    faqItem.classList.toggle('active');
+                });
+            });
+        });
     </script>
 
 </body>
