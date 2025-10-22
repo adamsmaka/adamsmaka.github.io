@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="21-dniowy plan awaryjny dla kobiet, które od lat budzą się punktualnie o 3 w nocy. Konkretne instrukcje CO ROBIĆ gdy się obudzisz.">
     <title>Protokół 3AM - 21-dniowy plan awaryjny dla chronicznie nieśpiących</title>
     <style>
         * {
@@ -12,664 +11,829 @@
             box-sizing: border-box;
         }
         
+        :root {
+            --primary: #FF6B6B;
+            --primary-dark: #E55555;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+            --border: #e0e0e0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.1);
+            --max-width: 800px;
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: var(--text-dark);
+            background: white;
         }
         
         .container {
-            max-width: 800px;
+            max-width: var(--max-width);
             margin: 0 auto;
             padding: 20px;
         }
         
-        /* Urgency Banner */
-        .urgency-banner {
-            background: linear-gradient(90deg, #ff4757 0%, #ff6348 100%);
-            color: white;
-            text-align: center;
-            padding: 15px 20px;
-            font-weight: bold;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.9; }
-        }
-        
-        .timer {
-            font-size: 1.3em;
-            font-family: 'Courier New', monospace;
-            margin: 5px 0;
-        }
-        
-        /* Main Content */
-        .content-section {
-            background: white;
-            border-radius: 12px;
-            padding: 40px;
-            margin: 30px 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-        
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
-            color: white;
             text-align: center;
-            padding: 60px 40px;
+            padding: 40px 20px 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
         }
         
-        .hero h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+        h1 {
+            font-size: clamp(28px, 5vw, 42px);
             line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: 800;
         }
         
-        .hero p {
-            font-size: 1.2em;
-            margin: 15px 0;
-            opacity: 0.9;
-        }
-        
-        .hero .highlight {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #ffd93d;
-            margin: 25px 0;
+        .subtitle {
+            font-size: clamp(18px, 3vw, 22px);
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto 30px;
         }
         
         /* CTA Button */
         .cta-button {
             display: inline-block;
-            background: linear-gradient(90deg, #ff4757 0%, #ff6348 100%);
+            background: var(--primary);
             color: white;
             padding: 18px 40px;
             text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.2em;
+            border-radius: 8px;
+            font-size: 18px;
             font-weight: bold;
-            margin: 20px 0;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4);
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
         }
         
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 71, 87, 0.6);
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
         }
         
-        /* Typography */
-        h2 {
-            font-size: 2em;
+        /* Problem Section */
+        .problem {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .problem h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+        }
+        
+        .problem-text {
+            font-size: 18px;
+            line-height: 1.8;
             margin-bottom: 20px;
-            color: #16213e;
         }
         
-        h3 {
-            font-size: 1.5em;
-            margin: 20px 0 10px;
-            color: #0f3460;
-        }
-        
-        /* Problem Box */
-        .problem-box {
-            background: #fff5f5;
-            border-left: 5px solid #ff4757;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-        }
-        
-        /* Timeline */
-        .timeline {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-        
-        .timeline-item {
-            padding: 10px 0;
-            border-left: 3px solid #ff4757;
-            padding-left: 20px;
-            margin: 10px 0;
-        }
-        
-        /* Failed Solutions */
-        .failed-solutions {
-            background: #fff9e6;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-        
-        .failed-item {
-            padding: 10px 0;
-            display: flex;
-            align-items: flex-start;
-        }
-        
-        .failed-item::before {
-            content: "✗";
-            color: #ff4757;
-            font-size: 1.5em;
-            margin-right: 15px;
+        .time-stamp {
             font-weight: bold;
+            color: var(--primary);
         }
         
-        /* Cost Box */
-        .cost-box {
-            background: linear-gradient(135deg, #ff4757 0%, #ff6348 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 8px;
-            text-align: center;
-            margin: 20px 0;
-            font-size: 1.2em;
-        }
-        
-        .cost-box strong {
-            font-size: 1.5em;
-            display: block;
-            margin-top: 10px;
-        }
-        
-        /* Solution Box */
-        .solution-box {
-            background: #e8f5e9;
-            border: 3px solid #4caf50;
-            padding: 30px;
-            border-radius: 8px;
-            margin: 30px 0;
-            text-align: center;
-        }
-        
-        .solution-box p {
-            font-size: 1.2em;
-            margin: 10px 0;
-        }
-        
-        /* Chapter Box */
-        .chapter-box {
-            background: #f0f4ff;
-            border-left: 5px solid #5a7bff;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 8px;
-        }
-        
-        .chapter-box h3 {
-            color: #5a7bff;
-            margin-bottom: 10px;
-        }
-        
-        /* Bonus Box */
-        .bonus-box {
-            background: linear-gradient(135deg, #ffd93d 0%, #ffed4e 100%);
-            padding: 25px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-        
-        .bonus-item {
-            background: white;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 6px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        /* Testimonial */
-        .testimonial {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 5px solid #4caf50;
-        }
-        
-        .testimonial p:first-child {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #0f3460;
-            margin-bottom: 10px;
-        }
-        
-        .testimonial .author {
-            font-style: italic;
-            color: #666;
-            margin-top: 15px;
-        }
-        
-        /* Price Box */
-        .price-box {
-            background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
-            color: white;
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-            margin: 30px 0;
-        }
-        
-        .price-old {
-            font-size: 1.5em;
-            text-decoration: line-through;
-            opacity: 0.7;
-            margin: 10px 0;
-        }
-        
-        .price-new {
-            font-size: 3em;
-            font-weight: bold;
-            color: #ffd93d;
-            margin: 20px 0;
-        }
-        
-        /* Comparison */
-        .comparison {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-        
-        .comparison-item {
-            padding: 10px 0;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .comparison-item:last-child {
-            border-bottom: none;
-            background: #e8f5e9;
-            padding: 15px;
-            margin-top: 10px;
-            border-radius: 6px;
-        }
-        
-        /* FAQ */
-        .faq-item {
-            background: #f8f9fa;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 8px;
-            border-left: 3px solid #5a7bff;
-        }
-        
-        .faq-item strong {
-            color: #0f3460;
-            font-size: 1.1em;
-            display: block;
-            margin-bottom: 10px;
-        }
-        
-        /* Guarantee */
-        .guarantee-box {
-            background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
-            color: white;
+        .consequence-list {
+            background: var(--bg-light);
             padding: 30px;
             border-radius: 12px;
             margin: 30px 0;
-            text-align: center;
         }
         
-        .guarantee-box h2 {
-            color: white;
+        .consequence-list h3 {
+            margin-bottom: 20px;
+            font-size: 24px;
         }
         
-        /* Lists */
-        ul {
+        .consequence-list ul {
             list-style: none;
-            padding: 0;
         }
         
-        ul li {
-            padding: 8px 0;
+        .consequence-list li {
+            padding: 12px 0;
             padding-left: 30px;
             position: relative;
         }
         
-        ul li::before {
-            content: "→";
+        .consequence-list li:before {
+            content: "❌";
             position: absolute;
             left: 0;
-            color: #ff4757;
-            font-weight: bold;
         }
         
-        /* Responsive */
+        /* Failed Solutions */
+        .failed {
+            padding: 60px 20px;
+            background: var(--bg-light);
+        }
+        
+        .failed h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+        
+        .failed-list {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        
+        .failed-list li {
+            list-style: none;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .cost-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .cost-total {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        /* Solution Section */
+        .solution {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .solution h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+        }
+        
+        .solution-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        /* What's Inside */
+        .contents {
+            padding: 60px 20px;
+            background: var(--bg-light);
+        }
+        
+        .contents h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .chapter {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+        
+        .chapter h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .benefit {
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        /* Bonuses */
+        .bonuses {
+            background: white;
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 12px;
+            border: 3px solid var(--primary);
+        }
+        
+        .bonus-item {
+            padding: 20px;
+            margin: 20px 0;
+            background: var(--bg-light);
+            border-radius: 8px;
+        }
+        
+        .bonus-value {
+            color: var(--primary);
+            font-weight: bold;
+            float: right;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .testimonial {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .testimonial-quote {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+        
+        /* Price Section */
+        .price {
+            padding: 60px 20px;
+            background: var(--bg-light);
+            text-align: center;
+        }
+        
+        .price-box {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .price-amount {
+            font-size: 64px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .price-compare {
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .compare-item {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .faq h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background: var(--bg-light);
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .faq-answer {
+            padding: 20px;
+            background: white;
+            display: none;
+        }
+        
+        .faq-item:target .faq-answer {
+            display: block;
+        }
+        
+        /* Guarantee */
+        .guarantee {
+            padding: 60px 20px;
+            background: var(--bg-light);
+            text-align: center;
+        }
+        
+        .guarantee-box {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            border: 3px dashed var(--primary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .guarantee h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        /* Mobile Sticky CTA */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 1.8em;
+            .mobile-cta {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 15px;
+                box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+                z-index: 1000;
+                display: flex;
+                justify-content: center;
             }
             
-            .content-section {
-                padding: 25px;
+            .mobile-cta .cta-button {
+                width: 90%;
+                text-align: center;
             }
             
-            h2 {
-                font-size: 1.5em;
+            body {
+                padding-bottom: 80px;
             }
-            
-            .price-new {
-                font-size: 2em;
-            }
+        }
+        
+        /* Utilities */
+        .highlight {
+            background: yellow;
+            padding: 2px 4px;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .mb-4 {
+            margin-bottom: 40px;
+        }
+        
+        /* Urgency Timer Styles */
+        .urgency-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(90deg, #FF6B6B 0%, #E55555 100%);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            z-index: 9999;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .urgency-banner .timer {
+            font-size: 20px;
+            font-weight: 900;
+            margin: 0 10px;
+            background: rgba(0,0,0,0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        
+        .urgency-banner.urgent {
+            background: linear-gradient(90deg, #FF3333 0%, #CC0000 100%);
+            animation: pulse 1s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.9; }
+            100% { opacity: 1; }
+        }
+        
+        body.has-urgency-banner {
+            padding-top: 50px;
+        }
+        
+        .price-urgency {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .price-strike {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 20px;
+        }
+        
+        .price-now {
+            color: #28a745;
+            font-size: 32px;
+            font-weight: bold;
         }
     </style>
 </head>
-<body>
-
+<body class="has-urgency-banner">
     <!-- Urgency Banner -->
-    <div class="urgency-banner">
-        <div>⏰ PROMOCJA KOŃCZY SIĘ O <span id="nextHour">20:00</span></div>
-        <div class="timer">Zostało: <span id="countdown">05:43:21</span></div>
-        <div>Cena wzrasta do 197 zł</div>
+    <div class="urgency-banner" id="urgencyBanner">
+        ⏰ PROMOCJA KOŃCZY SIĘ O <span id="nextHour">20:00</span>
+        | Zostało: <span class="timer" id="countdown">05:43:21</span>
+        | Cena wzrasta do 197 zł
     </div>
-
-    <div class="container">
-        
-        <!-- Hero Section -->
-        <div class="content-section hero">
-            <h1>Jest 3:17 w nocy. Znowu.</h1>
-            <p>Leżysz i patrzysz w sufit. Scrollujesz telefon do 5 rano.</p>
-            <p>Liczysz ile godzin zostało do budzika.</p>
-            <p class="highlight">21 dni temu 1,247 kobiet miało ten sam problem.<br>Dziś śpią całą noc.</p>
-            <p style="font-size: 1.1em; margin-top: 30px;">21-dniowy plan awaryjny dla kobiet, które od lat budzą się punktualnie o 3 w nocy</p>
-            <a href="#cta" class="cta-button">CHCĘ PROTOKÓŁ 3AM →</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 style="line-height: 1.4;">Jest 3:17 w nocy. Znowu.</h1>
+            <p style="font-size: 24px; margin: 20px auto; max-width: 700px;">
+                Leżysz i patrzysz w sufit. Scrollujesz telefon do 5 rano.<br>
+                Liczysz ile godzin zostało do budzika.
+            </p>
+            <p class="subtitle" style="margin: 30px auto;">
+                <strong>21 dni temu 1,247 kobiet miało ten sam problem.</strong><br>
+                Dziś śpią całą noc.
+            </p>
+            <p style="font-size: 20px; opacity: 0.95;">21-dniowy plan awaryjny dla kobiet, które od lat budzą się punktualnie o 3 w nocy</p>
+            <a href="https://smaka.lemonsqueezy.com/buy/8062e288-e1df-4101-b37b-5a7ca75dbd9d" class="cta-button">CHCĘ PROTOKÓŁ 3AM →</a>
         </div>
+    </section>
 
-        <!-- Problem Section -->
-        <div class="content-section">
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
             <h2>"Znasz to pieprzone uczucie..."</h2>
             
-            <p style="font-size: 1.2em; margin: 20px 0;">Jest 3:17 w nocy. Znowu.</p>
-            <p style="font-size: 1.2em;">Leżysz i patrzysz w sufit. Serce bije szybciej...</p>
+            <p class="problem-text">
+                Jest <span class="time-stamp">3:17 w nocy</span>. Znowu.
+            </p>
             
-            <div class="timeline">
-                <h3>Chronologia Twojej Nocy:</h3>
-                <div class="timeline-item"><strong>3:00</strong> - Oczy szeroko otwarte</div>
-                <div class="timeline-item"><strong>3:15</strong> - Przewracasz się na drugi bok</div>
-                <div class="timeline-item"><strong>3:42</strong> - Sięgasz po telefon</div>
-                <div class="timeline-item"><strong>4:15</strong> - "Jeśli zasnę TERAZ..."</div>
-                <div class="timeline-item"><strong>5:30</strong> - Może 20 minut drzemki</div>
-                <div class="timeline-item"><strong>6:00</strong> - Budzik. Znowu zombie.</div>
+            <p class="problem-text">
+                Leżysz i <strong>patrzysz w sufit</strong>. Serce bije szybciej, bo wiesz co to oznacza - kolejna noc "tej tortury leżenia i niemożności zaśnięcia".
+            </p>
+            
+            <p class="problem-text">
+                Przewracasz się na drugi bok. Potem na brzuch. Z powrotem na plecy. Nic.
+            </p>
+            
+            <p class="problem-text">
+                Myślisz: <em>"Dlaczego wszyscy inni mogą spać, a ja nie?"</em>
+            </p>
+            
+            <p class="problem-text">
+                Sięgasz po telefon. <span class="time-stamp">3:42</span>. Scrollujesz Instagram, czytasz o bezsenności na Reddit, liczysz ile godzin zostało do budzika. <em>"Jeśli zasnę TERAZ, to będę miała chociaż 3 godziny..."</em>
+            </p>
+            
+            <p class="problem-text">
+                <span class="time-stamp">4:15</span>. Dalej nic. Frustracja miesza się ze złością. <em>"Jutro znowu będę funkcjonować jak zombie."</em>
+            </p>
+            
+            <p class="problem-text">
+                <span class="time-stamp">5:30</span>. Może ze 20 minut drzemki. Budzik dzwoni o 6:00.
+            </p>
+            
+            <div style="background: #fff3cd; padding: 25px; border-radius: 12px; margin: 30px 0; border-left: 4px solid #FF6B6B;">
+                <h3 style="color: #FF6B6B; margin-bottom: 15px;">Chronologia Twojej Nocy:</h3>
+                <p><strong>3:00</strong> - Oczy szeroko otwarte</p>
+                <p><strong>3:15</strong> - Przewracasz się na drugi bok</p>
+                <p><strong>3:42</strong> - Sięgasz po telefon</p>
+                <p><strong>4:15</strong> - "Jeśli zasnę TERAZ..."</p>
+                <p><strong>5:30</strong> - Może 20 minut drzemki</p>
+                <p><strong>6:00</strong> - Budzik. Znowu zombie.</p>
             </div>
             
-            <div class="problem-box">
+            <div class="consequence-list">
                 <h3>A najgorsze jest to, że...</h3>
                 <ul>
-                    <li>Twoja szefowa myśli że jesteś leniwa</li>
-                    <li>Partner jest zirytowany twoim przewracaniem się</li>
-                    <li>Zapominasz prostych rzeczy</li>
-                    <li>Wybuchasz z byle powodu</li>
-                    <li>Czujesz się jak inwalida</li>
+                    <li>Twoja szefowa myśli że jesteś leniwa (bo przychodzisz zmęczona)</li>
+                    <li>Partner jest zirytowany twoim przewracaniem się w łóżku</li>
+                    <li>Zapominasz prostych rzeczy (gdzie kluczyki, co miałaś zrobić)</li>
+                    <li>Wybuchasz z byle powodu na dzieci, męża, koleżankę</li>
+                    <li>Czujesz się jak inwalida który nie potrafi robić tak podstawowej rzeczy jak spanie</li>
                 </ul>
             </div>
         </div>
+    </section>
 
-        <!-- Failed Solutions -->
-        <div class="content-section">
+    <!-- Failed Solutions -->
+    <section class="failed">
+        <div class="container">
             <h2>"Próbowałam już WSZYSTKIEGO..."</h2>
+            <p>Zgadza się. Wiem że próbowałaś:</p>
             
-            <div class="failed-solutions">
-                <div class="failed-item">
-                    <div><strong>Melatoniny</strong> - "koszmary senne albo zero efektu"</div>
-                </div>
-                <div class="failed-item">
-                    <div><strong>Magnezu</strong> - "może trochę pomaga, ale to nie rozwiązanie"</div>
-                </div>
-                <div class="failed-item">
-                    <div><strong>Ambien/Stilnox</strong> - "działał tydzień, potem tolerancja"</div>
-                </div>
-                <div class="failed-item">
-                    <div><strong>CBD/marihuany</strong> - "pomaga zasnąć ale budzę się otępiała"</div>
-                </div>
-                <div class="failed-item">
-                    <div><strong>Higieny snu</strong> - "żadne ciemne pokoje nie pomogą"</div>
-                </div>
-                <div class="failed-item">
-                    <div><strong>Medytacji</strong> - "tylko bardziej się stresuję"</div>
-                </div>
-                <div class="failed-item">
-                    <div><strong>Terapii CBT-I</strong> - "za trudne do wytrzymania"</div>
-                </div>
+            <div class="failed-list">
+                <ul>
+                    <li>✓ <strong>Melatoniny</strong> - "koszmary senne albo zero efektu"</li>
+                    <li>✓ <strong>Magnezu</strong> - "może trochę pomaga, ale to nie rozwiązanie"</li>
+                    <li>✓ <strong>Ambien/Stilnox</strong> - "działał tydzień, potem tolerancja"</li>
+                    <li>✓ <strong>CBD/marihuany</strong> - "pomaga zasnąć ale budzę się otępiała"</li>
+                    <li>✓ <strong>Higieny snu</strong> - "żadne ciemne pokoje i ciepłe mleko nie pomogą"</li>
+                    <li>✓ <strong>Medytacji</strong> - "tylko bardziej się stresuję że nie działa"</li>
+                    <li>✓ <strong>Terapii CBT-I</strong> - "za trudne do wytrzymania ograniczenie snu"</li>
+                </ul>
             </div>
             
             <div class="cost-box">
-                <div>Ile to kosztowało?</div>
-                <div>Suplementy: ~500 zł miesięcznie</div>
-                <div>Wizyty u specjalistów: ~3000 zł</div>
-                <div>Badanie snu: ~2000 zł</div>
-                <strong>RAZEM: ~10,000+ zł wyrzucone</strong>
+                <h3>Ile to Cię kosztowało?</h3>
+                <p>Suplementy: ~500 zł miesięcznie</p>
+                <p>Wizyty u specjalistów: ~3000 zł</p>
+                <p>Badanie snu: ~2000 zł ("nic nie znaleźli")</p>
+                <p>Materac "ortopedyczny": ~4000 zł</p>
+                <p class="cost-total">RAZEM: ~10,000+ zł wyrzucone w błoto</p>
+                <p><strong>I dalej budzisz się o 3 w nocy.</strong></p>
             </div>
         </div>
+    </section>
 
-        <!-- Solution -->
-        <div class="content-section">
-            <h2>Ale jest jeden sposób, którego nie znasz...</h2>
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <h2>Ale jest jeden sposób, którego prawdopodobnie nie znasz...</h2>
             
             <div class="solution-box">
-                <p><strong>Problem NIE jest w tym że się budzisz o 3 w nocy.</strong></p>
-                <p><strong>Problem jest w tym, że nie wiesz CO KONKRETNIE robić gdy się obudzisz.</strong></p>
+                <h3>Co jeśli powiem Ci, że problem NIE jest w tym że się budzisz o 3 w nocy?</h3>
+                <p>Problem jest w tym, że <strong>nie wiesz CO KONKRETNIE robić</strong> gdy już się obudzisz.</p>
+                <p>Wszystkie metody które próbowałaś skupiają się na ZAPOBIEGANIU przebudzeniu. Ale gdy masz rozregulowany układ nerwowy od lat bezsenności, <strong>przebudzenie o 3AM jest NIEUNIKNIONE</strong>.</p>
             </div>
             
-            <p style="font-size: 1.3em; text-align: center; margin: 30px 0; font-weight: bold;">
-                Protokół 3AM = instrukcja obsługi awarii
-            </p>
+            <h3>Protokół 3AM działa inaczej:</h3>
+            <p>Zamiast walczyć z przebudzeniem (przegrana bitwa), <strong>uczysz się jak wykorzystać to okno czasowe</strong> żeby zresetować układ nerwowy i wrócić do snu.</p>
+            <p>To jak <strong>instrukcja obsługi awarii</strong> - dokładnie co robić krok po kroku gdy się obudzisz, żeby nie wpadać w panikę i scrollowanie do 5 rano.</p>
             
-            <div class="problem-box">
-                <h3>Co czeka Cię za rok bez zmiany?</h3>
-                <ul>
-                    <li>365 nocy patrzenia w sufit</li>
-                    <li>2,190 godzin scrollowania telefonu</li>
-                    <li>87,600 zł strat (240 zł/dzień produktywności)</li>
-                    <li>Niezliczone kłótnie z partnerem</li>
-                </ul>
+            <div style="background: #fef3f3; padding: 30px; border-radius: 12px; margin: 40px 0; border: 2px solid #FF6B6B;">
+                <h3 style="color: #FF6B6B; margin-bottom: 20px;">Co czeka Cię za rok bez zmiany?</h3>
+                <p style="font-size: 18px; line-height: 1.8;">
+                    <strong>365 nocy</strong> patrzenia w sufit<br>
+                    <strong>2,190 godzin</strong> scrollowania telefonu<br>
+                    <strong>87,600 zł strat</strong> (240 zł/dzień utraconej produktywności)<br>
+                    <strong>Niezliczone kłótnie</strong> z partnerem o Twoje wiercenie się w łóżku<br>
+                    <strong>Kolejny rok</strong> gdzie szefowa myśli że jesteś leniwa
+                </p>
+                <p style="margin-top: 20px; font-size: 20px; text-align: center;">
+                    <strong>Albo możesz to zatrzymać w 21 dni.</strong>
+                </p>
             </div>
         </div>
+    </section>
 
-        <!-- What's Inside -->
-        <div class="content-section">
-            <h2>Co znajdziesz w środku:</h2>
+    <!-- What's Inside -->
+    <section class="contents">
+        <div class="container">
+            <h2>Co dokładnie znajdziesz w środku:</h2>
             
-            <div class="chapter-box">
-                <h3>Rozdział 1: "Dlaczego zawsze o 3 w nocy"</h3>
-                <p>→ Przestaniesz się obwiniać że "coś jest ze mną nie tak"</p>
+            <div class="chapter">
+                <h3>Rozdział 1: "Dlaczego zawsze kurwa o 3 w nocy"</h3>
+                <p>Neurobiologia przebudzeń (czemu akurat 3AM), dlaczego Twój mózg "pamięta" tę godzinę</p>
+                <p class="benefit">✅ Korzyść: Przestaniesz się obwiniać że "coś jest ze mną nie tak"</p>
             </div>
             
-            <div class="chapter-box">
+            <div class="chapter">
                 <h3>Rozdział 2: "Protokół Pierwszej Godziny (3:00-4:00)"</h3>
-                <p>→ Zamiast paniki - konkretny plan działania</p>
+                <p>5-minutowy reset oddechowy, pozycja "controlled surrender", co robić z racing thoughts</p>
+                <p class="benefit">✅ Korzyść: Zamiast paniki - konkretny plan działania</p>
             </div>
             
-            <div class="chapter-box">
+            <div class="chapter">
                 <h3>Rozdział 3: "Technika Kontrolowanej Kapitulacji"</h3>
-                <p>→ Koniec z frustracją i złością na siebie</p>
+                <p>Gdy wiesz że już nie zaśniesz, jak "odpuścić" bez poczucia przegranej</p>
+                <p class="benefit">✅ Korzyść: Koniec z frustracją i złością na siebie</p>
             </div>
             
-            <div class="chapter-box">
+            <div class="chapter">
                 <h3>Rozdział 4: "Plan B na Zombie Day"</h3>
-                <p>→ Funkcjonujesz normalnie mimo nieprzespanej nocy</p>
+                <p>Mikro-regeneracje w ciągu dnia, protokół "przeżyć do wieczora"</p>
+                <p class="benefit">✅ Korzyść: Funkcjonujesz normalnie mimo nieprzespanej nocy</p>
             </div>
             
-            <div class="chapter-box">
+            <div class="chapter">
                 <h3>Rozdział 5: "Reset Układu Nerwowego"</h3>
-                <p>→ 3 ćwiczenia na rozregulowany rytm</p>
+                <p>3 ćwiczenia na rozregulowany rytm, technika "second sleep"</p>
+                <p class="benefit">✅ Korzyść: Uczysz ciało ponownie jak zasypiać</p>
             </div>
             
-            <div class="chapter-box">
+            <div class="chapter">
                 <h3>Rozdział 6: "Dziennik Wzorców Przebudzeń"</h3>
-                <p>→ Odkrywasz CO dokładnie Cię budzi</p>
+                <p>Szablon do wypełnienia, jak znaleźć swoje triggery</p>
+                <p class="benefit">✅ Korzyść: Odkrywasz CO dokładnie Cię budzi</p>
             </div>
             
-            <div class="chapter-box">
+            <div class="chapter">
                 <h3>Rozdział 7: "21 Dni Do Nowego Rytmu"</h3>
-                <p>→ Nie musisz myśleć, tylko follow the plan</p>
+                <p>Dzień po dniu - plan implementacji, checklisty i przypomnienia</p>
+                <p class="benefit">✅ Korzyść: Nie musisz myśleć, tylko follow the plan</p>
             </div>
             
-            <div class="bonus-box">
-                <h3 style="text-align: center; margin-bottom: 20px;">+ BONUSY o wartości 91 zł:</h3>
+            <div class="bonuses">
+                <h2 class="text-center">🎁 BONUSY W ZESTAWIE</h2>
+                
                 <div class="bonus-item">
-                    <strong>🎁 BONUS #1:</strong> "Kryzysowa Ściąga 3AM" - PDF na telefon <span style="color: #666;">(wartość 27 zł)</span>
+                    <span class="bonus-value">wartość 27 zł</span>
+                    <h4>BONUS #1: "Kryzysowa Ściąga 3AM"</h4>
+                    <p>PDF na telefon z instrukcjami "co robić TERAZ gdy nie mogę spać"</p>
                 </div>
+                
                 <div class="bonus-item">
-                    <strong>🎁 BONUS #2:</strong> "10 Podcastów Na Bezsenną Noc" - z czasami i linkami <span style="color: #666;">(wartość 17 zł)</span>
+                    <span class="bonus-value">wartość 17 zł</span>
+                    <h4>BONUS #2: "10 Podcastów Na Bezsenną Noc"</h4>
+                    <p>Specjalnie wyselekcjonowane, z dokładnymi czasami które części słuchać</p>
                 </div>
+                
                 <div class="bonus-item">
-                    <strong>🎁 BONUS #3:</strong> Dostęp do grupy FB "Nocne Marki" - wsparcie 24/7 <span style="color: #666;">(wartość 47 zł/mies)</span>
+                    <span class="bonus-value">wartość 47 zł/mies</span>
+                    <h4>BONUS #3: Dostęp do grupy FB "Nocne Marki"</h4>
+                    <p>Wsparcie 24/7 od kobiet które przechodzą to samo</p>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Testimonials -->
-        <div class="content-section">
-            <h2>Co mówią kobiety które stosują Protokół:</h2>
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="text-center mb-4">Co mówią kobiety które już stosują Protokół:</h2>
             
             <div class="testimonial">
-                <p>"Pierwszy raz od 5 lat przespałam całą noc"</p>
-                <p>"Dzień 7: pierwszy raz od 5 lat przespałam do 6 rano. Płakałam ze szczęścia. Ten protokół dał mi z powrotem życie."</p>
-                <p class="author">— Monika K., 42 lata</p>
+                <p class="testimonial-quote">"Pierwszy raz od 5 lat przespałam całą noc"</p>
+                <p class="testimonial-text">"Stosowałam Protokół dokładnie jak napisane. Pierwsze 3 noce dalej budziłam się o 3, ale zamiast paniki - wiedziałam co robić. W 7 dniu pierwszy raz od 5 lat przespałam do 6 rano. Płakałam ze szczęścia."</p>
+                <p class="testimonial-author">— Monika K., 42 lata, mama dwójki dzieci</p>
             </div>
             
             <div class="testimonial">
-                <p>"Przestałam bać się łóżka"</p>
-                <p>"Przez lata łóżko było synonimem stresu. Protokół dał mi poczucie kontroli. Nawet jak się budzę, to wiem że sobie poradzę. To zmieniło wszystko."</p>
-                <p class="author">— Anna W., 38 lat</p>
+                <p class="testimonial-quote">"Przestałam bać się łóżka"</p>
+                <p class="testimonial-text">"Najgorszy był ten strach przed położeniem się. Wiedziałam że znowu będę leżeć i patrzeć w sufit. Protokół dał mi poczucie kontroli. Nawet jak się budzę, to wiem że sobie poradzę. To zmieniło wszystko."</p>
+                <p class="testimonial-author">— Anna W., 38 lat, księgowa</p>
             </div>
             
             <div class="testimonial">
-                <p>"Wreszcie nie jestem zombie w pracy"</p>
-                <p>"Funkcjonowanie jak zombie przez 3 lata kosztowało mnie awans. Po protokole wreszcie mogę myśleć jasno. Partner też zauważył różnicę - nie jestem już tak drażliwa."</p>
-                <p class="author">— Kasia M., 36 lat</p>
+                <p class="testimonial-quote">"Mój mąż nie wierzy że to ta sama osoba"</p>
+                <p class="testimonial-text">"Byłam koszmarem do życia. Wstawałam zła, kłóciłam się o bzdury, płakałam z wyczerpania. Po 21 dniach jestem spokojniejsza, śpię 6-7 godzin i mam energię. Mąż pyta czy brałam jakieś leki (nie brałam!)."</p>
+                <p class="testimonial-author">— Katarzyna S., 45 lat, nauczycielka</p>
             </div>
         </div>
+    </section>
 
-        <!-- Price -->
-        <div class="price-box" id="cta">
-            <h2 style="color: white;">Inwestycja:</h2>
-            
-            <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; margin: 20px 0;">
-                <div style="font-size: 1.2em; margin-bottom: 10px;">⚠️ OFERTA WAŻNA DO <span id="priceDeadline">20:00</span></div>
-                <div style="font-size: 1em; opacity: 0.9;">System automatycznie przełącza ceny 4x dziennie</div>
-                <div style="font-size: 1em; opacity: 0.9; margin-top: 5px;">Następna promocja dopiero o <span id="nextPromo">2:00</span></div>
-            </div>
-            
-            <div class="price-old">Cena regularna: 197 zł</div>
-            <div class="price-new">TERAZ TYLKO: 97 zł</div>
-            
-            <div class="comparison">
-                <div class="comparison-item">❌ Miesięczna terapia CBT-I: 800-1200 zł</div>
-                <div class="comparison-item">❌ Wizyta u specjalisty: 300-500 zł</div>
-                <div class="comparison-item">❌ Miesięczne suplementy: 200-500 zł</div>
-                <div class="comparison-item">✅ <strong>Protokół 3AM: Jednorazowo 97 zł</strong></div>
-            </div>
-            
-            <a href="https://lemonsqueezy.com/your-product-link" class="cta-button" style="margin-top: 30px;">ZAMÓW PROTOKÓŁ 3AM TERAZ →</a>
-        </div>
-
-        <!-- FAQ -->
-        <div class="content-section">
-            <h2>Najczęstsze pytania:</h2>
-            
-            <div class="faq-item">
-                <strong>Q: Co jeśli u mnie to nie zadziała?</strong>
-                <p>A: 30-dniowa gwarancja zwrotu pieniędzy. Nie działa = zwrot 100%. Bez pytań.</p>
-            </div>
-            
-            <div class="faq-item">
-                <strong>Q: Czy to zastąpi leki które biorę?</strong>
-                <p>A: Nie, to nie jest zamiennik leków. Możesz stosować Protokół równolegle z lekami. Zawsze konsultuj zmiany w lekach z lekarzem.</p>
-            </div>
-            
-            <div class="faq-item">
-                <strong>Q: Próbowałam już wszystkiego. Dlaczego to miałoby zadziałać?</strong>
-                <p>A: Bo inne metody próbują ZAPOBIEC przebudzeniu o 3 w nocy. Protokół 3AM zakłada że BĘDZIESZ się budzić i daje konkretne instrukcje CO ROBIĆ gdy to się stanie. To fundamentalnie inne podejście.</p>
-            </div>
-            
-            <div class="faq-item">
-                <strong>Q: Czy dostanę fakturę VAT?</strong>
-                <p>A: Tak, automatycznie po zakupie otrzymasz fakturę VAT na email.</p>
-            </div>
-            
-            <div class="faq-item">
-                <strong>Q: Jak szybko otrzymam produkt?</strong>
-                <p>A: Natychmiast po płatności. Link do pobrania dostaniesz na email w ciągu 2 minut.</p>
+    <!-- Price Section -->
+    <section class="price">
+        <div class="container">
+            <div class="price-box">
+                <h2>Inwestycja:</h2>
+                
+                <div class="price-urgency">
+                    <p style="font-size: 18px; color: #FF6B6B; font-weight: bold; margin-bottom: 15px;">
+                        ⚠️ OFERTA WAŻNA DO <span id="priceDeadline">20:00</span>
+                    </p>
+                    <p class="price-strike">Cena regularna: 197 zł</p>
+                    <p class="price-now">TERAZ TYLKO: 97 zł</p>
+                    <p style="font-size: 14px; margin-top: 15px; color: #666;">
+                        System automatycznie przełącza ceny 4x dziennie<br>
+                        Następna promocja dopiero o <span id="nextPromo">2:00</span>
+                    </p>
+                </div>
+                
+                <div class="price-compare">
+                    <h4>Porównaj to do:</h4>
+                    <div class="compare-item">❌ Miesięczna terapia CBT-I: 800-1200 zł</div>
+                    <div class="compare-item">❌ Wizyta u specjalisty od snu: 300-500 zł</div>
+                    <div class="compare-item">❌ Miesięczne wydatki na suplementy: 200-500 zł</div>
+                    <div class="compare-item">❌ Kolejny "cud" materac: 3000-5000 zł</div>
+                    <div class="compare-item"><strong>✅ Protokół 3AM: Jednorazowo 97 zł</strong></div>
+                </div>
+                
+                <p style="margin-top: 30px;">⚠️ UWAGA: Cena 97 zł jest promocyjna tylko do końca tego tygodnia. Potem wraca do regularnej ceny 197 zł.</p>
+                
+                <a href="https://smaka.lemonsqueezy.com/buy/8062e288-e1df-4101-b37b-5a7ca75dbd9d" class="cta-button" style="margin-top: 30px;">ZAMÓW PROTOKÓŁ 3AM TERAZ →</a>
             </div>
         </div>
+    </section>
 
-        <!-- Guarantee -->
-        <div class="guarantee-box">
-            <h2>Gwarancja 30 Dni</h2>
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>Najczęściej zadawane pytania:</h2>
             
-            <p style="font-size: 1.2em; margin: 20px 0;">
-                <strong>Jeśli po 21 dniach nie zobaczysz:</strong>
-            </p>
-            <ul style="text-align: left; max-width: 500px; margin: 20px auto;">
-                <li style="color: white;">Łatwiejszego radzenia sobie z nocnymi przebudzeniami</li>
-                <li style="color: white;">Mniej paniki gdy się budzisz o 3 w nocy</li>
-                <li style="color: white;">Lepszego funkcjonowania w ciągu dnia</li>
-            </ul>
-            <p style="font-size: 1.3em; margin-top: 30px;">
-                <strong>...zwrócę Ci 100% wpłaty. Bez pytań.</strong>
-            </p>
+            <div class="faq-item" id="faq1">
+                <div class="faq-question">Q: Co jeśli u mnie to nie zadziała?</div>
+                <div class="faq-answer">A: Protokół ma 30-dniową gwarancję. Jeśli po uczciwie stosowanych technikach przez 21 dni nie zobaczysz poprawy, zwracam 100% wpłaty.</div>
+            </div>
+            
+            <div class="faq-item" id="faq2">
+                <div class="faq-question">Q: Czy to zastąpi leki które biorę?</div>
+                <div class="faq-answer">A: Nie, Protokół można stosować równolegle z lekami. Nie musisz nic odstawiać. Z czasem możesz potrzebować ich mniej, ale to decyzja Twoja i lekarza.</div>
+            </div>
+            
+            <div class="faq-item" id="faq3">
+                <div class="faq-question">Q: Ile czasu dziennie muszę na to poświęcić?</div>
+                <div class="faq-answer">A: Czytanie: 15-20 minut dziennie przez pierwszy tydzień. Stosowanie technik: robisz je gdy się budzisz w nocy, więc nie zabierają dodatkowego czasu.</div>
+            </div>
+            
+            <div class="faq-item" id="faq4">
+                <div class="faq-question">Q: Co jeśli budzę się o innej godzinie niż 3AM?</div>
+                <div class="faq-answer">A: Protokół działa na każde nocne przebudzenie między 2-5 rano. Mechanizm jest ten sam.</div>
+            </div>
+            
+            <div class="faq-item" id="faq5">
+                <div class="faq-question">Q: Czy jest wersja drukowana?</div>
+                <div class="faq-answer">A: Nie, tylko PDF. Ale możesz go wydrukować sama. Bonus "Kryzysowa Ściąga" jest specjalnie sformatowana do druku.</div>
+            </div>
+            
+            <div class="faq-item" id="faq6">
+                <div class="faq-question">Q: Próbowałam już wszystkiego. Dlaczego to miałoby zadziałać?</div>
+                <div class="faq-answer">A: Bo inne metody próbują ZAPOBIEC przebudzeniu o 3AM. Protokół 3AM zakłada, że BĘDZIESZ się budzić i daje Ci konkretne instrukcje CO ROBIĆ gdy to się stanie. To jak instrukcja obsługi awarii - krok po kroku, bez paniki, bez zgadywania. Zamiast walczyć z bezsennością, uczysz się z nią współpracować.</div>
+            </div>
         </div>
+    </section>
 
-        <!-- Final CTA -->
-        <div class="content-section" style="text-align: center;">
+    <!-- Guarantee -->
+    <section class="guarantee">
+        <div class="container">
+            <div class="guarantee-box">
+                <h2>Gwarancja 30 Dni</h2>
+                <p><strong>Jeśli po 21 dniach stosowania Protokołu nie zobaczysz:</strong></p>
+                <ul style="text-align: left; list-style: none; padding: 20px;">
+                    <li>• Łatwiejszego radzenia sobie z nocnymi przebudzeniami</li>
+                    <li>• Mniej paniki gdy się budzisz</li>
+                    <li>• Lepszego funkcjonowania w ciągu dnia</li>
+                </ul>
+                <p><strong>...zwrócę Ci 100% wpłaty. Bez pytań.</strong></p>
+                <p>Wystarczy napisać "Protokół nie zadziałał" i w ciągu 48h masz kasę z powrotem.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
             <h2>Ile jeszcze nocy chcesz spędzić patrząc w sufit o 3 rano?</h2>
-            
-            <p style="font-size: 1.2em; margin: 30px 0;">
-                Za rok możesz być w tym samym miejscu.<br>
-                Scrollować telefon do 5 rano.<br>
-                Funkcjonować jak zombie.<br>
-                Tracić 240 zł dziennie na produktywności.
-            </p>
-            
-            <p style="font-size: 1.3em; font-weight: bold; margin: 30px 0;">
-                Albo możesz dziś podjąć decyzję i za 21 dni spać spokojnie.
-            </p>
-            
-            <a href="https://lemonsqueezy.com/your-product-link" class="cta-button" style="font-size: 1.3em; padding: 20px 50px;">TAK, CHCĘ PROTOKÓŁ 3AM →</a>
-            
-            <p style="margin-top: 30px; color: #666;">
-                ✓ Natychmiastowy dostęp<br>
-                ✓ 30-dniowa gwarancja zwrotu<br>
-                ✓ Wszystkie bonusy w cenie
-            </p>
+            <p style="font-size: 20px; margin: 20px 0;">Za rok możesz być w tym samym miejscu - zmęczona, sfrustrowana, scrollująca telefon do świtu.</p>
+            <p style="font-size: 20px; margin: 20px 0;">Albo możesz dziś podjąć decyzję i za 21 dni spać spokojnie.</p>
+            <p style="font-size: 24px; font-weight: bold; margin: 30px 0;">Co wybierasz?</p>
+            <a href="https://smaka.lemonsqueezy.com/buy/8062e288-e1df-4101-b37b-5a7ca75dbd9d" class="cta-button">TAK, CHCĘ PROTOKÓŁ 3AM →</a>
+            <p style="margin-top: 20px; opacity: 0.9;">Bezpieczna płatność • Natychmiastowy dostęp • 30 dni gwarancji</p>
         </div>
+    </section>
 
-        <!-- Footer -->
-        <div style="text-align: center; padding: 40px 20px; color: #999;">
-            <p>© 2025 Protokół 3AM. Wszystkie prawa zastrzeżone.</p>
-            <p style="margin-top: 10px; font-size: 0.9em;">
-                To nie jest porada medyczna. W razie problemów skonsultuj się ze specjalistą.<br>
-                Wyniki mogą się różnić w zależności od indywidualnej sytuacji.
-            </p>
-        </div>
-
+    <!-- Mobile Sticky CTA (visible only on mobile) -->
+    <div class="mobile-cta" style="display: none;">
+        <a href="https://smaka.lemonsqueezy.com/buy/8062e288-e1df-4101-b37b-5a7ca75dbd9d" class="cta-button">ZAMÓW TERAZ →</a>
     </div>
 
-    <!-- Timer Script -->
     <script>
+        // Show mobile CTA on mobile devices
+        if (window.innerWidth <= 768) {
+            document.querySelector('.mobile-cta').style.display = 'flex';
+        }
+        
+        // Dynamic Urgency Timer
         function updateTimer() {
             const now = new Date();
             const hours = now.getHours();
             
+            // Określ następną pełną godzinę sprzedaży
             let targetHour;
             if (hours < 8) targetHour = 8;
             else if (hours < 14) targetHour = 14;
             else if (hours < 20) targetHour = 20;
             else targetHour = 24;
             
+            // Oblicz czas do końca
             let target = new Date();
             if (targetHour === 24) {
                 target.setDate(target.getDate() + 1);
@@ -683,23 +847,35 @@
             const minutesLeft = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
             const secondsLeft = Math.floor((diff % (1000 * 60)) / 1000);
             
+            // Formatuj czas
             const timeString = 
                 String(hoursLeft).padStart(2, '0') + ':' +
                 String(minutesLeft).padStart(2, '0') + ':' +
                 String(secondsLeft).padStart(2, '0');
             
+            // Aktualizuj wszystkie timery
             document.getElementById('countdown').textContent = timeString;
             document.getElementById('nextHour').textContent = 
                 targetHour === 24 ? '00:00' : targetHour + ':00';
             document.getElementById('priceDeadline').textContent = 
                 targetHour === 24 ? '00:00' : targetHour + ':00';
             
+            // Następna promocja
             let nextPromo = targetHour + 6;
             if (nextPromo > 24) nextPromo = nextPromo - 24;
             document.getElementById('nextPromo').textContent = 
                 nextPromo === 24 ? '00:00' : nextPromo + ':00';
+            
+            // Dodaj klasę urgent gdy mniej niż 1h
+            const banner = document.getElementById('urgencyBanner');
+            if (hoursLeft < 1) {
+                banner.classList.add('urgent');
+            } else {
+                banner.classList.remove('urgent');
+            }
         }
         
+        // Uruchom timer
         updateTimer();
         setInterval(updateTimer, 1000);
     </script>
