@@ -1,0 +1,46 @@
+REGULAMIN SPRZEDAŻY PRODUKTÓW CYFROWYCH (PDF)
+obowiązujący od dnia 26 października 2025
+
+§ 1. POSTANOWIENIA OGÓLNE
+	•	Regulamin określa zasady sprzedaży produktów cyfrowych w formacie PDF za pośrednictwem strony internetowej [UZUPEŁNIJ ADRES STRONY / LANDING PAGE].
+	•	Sprzedawcą jest: Adam Smaka z siedzibą pod adresem: ul. Mickiewicza 8/29. 12-200 Pisz. Poland.  e-mail: adam@kursfluttera.pl
+	•	Produkty oferowane przez Sprzedawcę to cyfrowe ebooki dostarczane w formacie PDF, przesyłane drogą elektroniczną (e-mail lub platforma dystrybucyjna).
+	•	Zakup produktów cyfrowych nie wymaga rejestracji konta ani logowania.
+
+§ 2. WARUNKI ZAMÓWIENIA I PŁATNOŚCI
+	•	Klient może dokonać zakupu 24/7 za pomocą formularza zamówienia dostępnego na stronie.
+	•	Dostępne metody płatności to:
+	•	Karta płatnicza (Stripe)
+	•	BLIK (przez Stripe Checkout)
+	•	Apple Pay / Google Pay (jeśli obsługiwane przez Stripe)
+	•	Cena produktu podana jest w złotych polskich (PLN) i zawiera wszelkie podatki.
+	•	Po dokonaniu płatności klient otrzyma ebooka drogą mailową lub przez platformę maksymalnie w ciągu 24 godzin.
+
+§ 3. PRODUKT CYFROWY I PRAWO AUTORSKIE
+	•	Wszystkie produkty oferowane przez Sprzedawcę są chronione prawem autorskim.
+	•	Zabrania się kopiowania, udostępniania lub rozpowszechniania produktów bez pisemnej zgody Sprzedawcy.
+	•	Zakup produktu daje Klientowi prawo do użytku własnego (na użytek prywatny lub wewnętrzny firmowy, bez dalszej odsprzedaży).
+
+
+
+§ 4. ODSTĄPIENIE OD UMOWY (ZWROTY)
+	•	Zgodnie z art. 38 pkt 13 ustawy o prawach konsumenta, prawo odstąpienia od umowy nie przysługuje w przypadku umów o dostarczanie treści cyfrowych, jeżeli spełnione są poniższe warunki:
+	•	Klient wyraził zgodę na realizację umowy przed upływem terminu do odstąpienia,
+	•	Klient został poinformowany o utracie prawa do odstąpienia i przyjął to do wiadomości.
+	•	W trakcie składania zamówienia Klient jest zobowiązany do zaznaczenia checkboxa o następującej treści: „Wyrażam zgodę na dostarczenie produktu cyfrowego przed upływem 14 dni od zakupu i przyjmuję do wiadomości, że tracę prawo do odstąpienia od umowy.”
+	•	Po zaakceptowaniu powyższego — nie przysługuje prawo zwrotu zakupionego produktu.
+
+§ 5. REKLAMACJE
+	•	Reklamacje dotyczące funkcjonowania strony lub problemów z dostępem do produktu należy zgłaszać drogą mailową na adres: adam@kursfluttera.pl.
+	•	Sprzedawca rozpatrzy reklamację w terminie do 14 dni roboczych od dnia jej otrzymania.
+
+§ 6. DANE OSOBOWE
+	•	Administratorem danych osobowych Klientów jest [UZUPEŁNIJ NAZWĘ/NADAWCĘ].
+	•	Dane osobowe są przetwarzane wyłącznie w celu realizacji zamówienia oraz prowadzenia niezbędnej komunikacji.
+	•	Szczegóły dotyczące przetwarzania danych znajdują się w Polityce Prywatności.
+
+§ 7. POSTANOWIENIA KOŃCOWE
+	•	Sprzedawca zastrzega sobie prawo do zmiany Regulaminu, o ile nie wpływa to na warunki zawartych już umów.
+	•	Regulamin dostępny jest na stronie sprzedażowej przed dokonaniem zakupu.
+	•	W sprawach nieuregulowanych niniejszym Regulaminem zastosowanie mają przepisy prawa polskiego.
+

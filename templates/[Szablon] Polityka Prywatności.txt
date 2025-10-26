@@ -1,0 +1,58 @@
+POLITYKA PRYWATNOŚCI
+Data publikacji: 26 października 2025
+Administratorem Twoich danych osobowych jest: Adam Smaka ul. Mickiewicza 8/29. 12-200 Pisz. Poland. adam@kursfluttera.pl
+Niniejsza Polityka Prywatności wyjaśnia, w jaki sposób zbieramy, przechowujemy i przetwarzamy Twoje dane osobowe w związku z zakupem ebooka (produktu cyfrowego) za pośrednictwem formularza zamówienia lub platformy sprzedażowej.
+
+1. PODSTAWA PRAWNA PRZETWARZANIA DANYCH
+Twoje dane przetwarzamy zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 (RODO), na podstawie:
+	•	art. 6 ust. 1 lit. b RODO (niezbędność do wykonania umowy)
+	•	art. 6 ust. 1 lit. c RODO (obowiązek prawny, np. podatkowy)
+
+2. JAKIE DANE ZBIERAMY?
+Zbieramy tylko dane niezbędne do realizacji zamówienia:
+	•	Imię i nazwisko
+	•	Adres e-mail
+	•	Dane do faktury (jeśli podane)
+
+3. CEL PRZETWARZANIA DANYCH
+Twoje dane wykorzystujemy w celu:
+	•	realizacji zamówienia i dostawy produktu cyfrowego (ebooka)
+	•	wystawienia rachunku / faktury (jeśli dotyczy)
+	•	zapewnienia obsługi posprzedażowej
+
+4. SPOSÓB DOSTAWY PRODUKTU
+Produkt cyfrowy (ebook w formacie PDF) dostarczany jest na adres e-mail wskazany w formularzu zamówienia, maksymalnie w ciągu 24 godzin od potwierdzenia płatności.
+
+5. OKRES PRZECHOWYWANIA DANYCH
+Twoje dane będziemy przechowywać przez okres niezbędny do:
+	•	wykonania umowy,
+	•	obowiązków rachunkowych i podatkowych (do 6 lat),
+	•	zabezpieczenia ewentualnych roszczeń.
+
+6. ODBIORCY DANYCH
+Twoje dane mogą być przekazywane:
+	•	dostawcom narzędzi do obsługi zamówień (np. systemy mailingowe, platformy sprzedażowe)
+	•	operatorom płatności (np. Stripe)
+	•	biuru rachunkowemu
+
+7. TWOJE PRAWA
+Przysługuje Ci prawo do:
+	•	dostępu do swoich danych,
+	•	ich sprostowania,
+	•	usunięcia (jeśli nie koliduje to z obowiązkiem prawnym),
+	•	ograniczenia przetwarzania,
+	•	wniesienia sprzeciwu,
+	•	przenoszenia danych,
+	•	wniesienia skargi do Prezesa UODO.
+
+8. DOBROWOLNOŚĆ PODANIA DANYCH
+Podanie danych osobowych jest dobrowolne, ale niezbędne do zrealizowania zamówienia.
+
+9. PLIKI COOKIES I ANALITYKA
+Jeśli korzystasz z naszej strony internetowej:
+	•	strona może korzystać z plików cookies
+	•	może korzystać z narzędzi analitycznych (np. Google Analytics, Meta Pixel)
+
+10. KONTAKT
+W sprawie swoich danych osobowych możesz skontaktować się z nami pod adresem: [E-MAIL KONTAKTOWY]
+

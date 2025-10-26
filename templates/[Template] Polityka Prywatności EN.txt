@@ -1,0 +1,97 @@
+PRIVACY POLICY
+Last Updated: October 26, 2025
+
+This Privacy Policy explains how Adam Smaka ("we," "us," or "our") collects, uses, and protects your personal information when you purchase digital products through our website.
+
+MERCHANT OF RECORD
+All payments are processed through Lemon Squeezy, our Merchant of Record. Lemon Squeezy is responsible for payment processing, VAT/sales tax collection, and customer billing. When you make a purchase, you are entering into a transaction with Lemon Squeezy as the seller of record.
+
+1. DATA CONTROLLER
+For the purposes of data protection law, the data controller is:
+Adam Smaka
+ul. Mickiewicza 8/29, 12-200 Pisz, Poland
+Email: adam@kursfluttera.pl
+
+2. LEGAL BASIS FOR PROCESSING
+We process your personal data under the following legal bases:
+	• Performance of contract (GDPR Art. 6(1)(b)) - to fulfill your order
+	• Legal obligation (GDPR Art. 6(1)(c)) - for tax and accounting purposes
+	• Legitimate interests (GDPR Art. 6(1)(f)) - to improve our services
+
+3. WHAT DATA WE COLLECT
+We collect only the data necessary to complete your purchase:
+	• Email address
+	• Name
+	• Billing information (processed by Lemon Squeezy)
+	• IP address and location (for tax purposes)
+	• Payment information (stored securely by Lemon Squeezy, not by us)
+
+4. HOW WE USE YOUR DATA
+Your data is used to:
+	• Deliver your digital product (PDF ebook) via email
+	• Send order confirmations and receipts
+	• Provide customer support
+	• Comply with legal and tax obligations
+	• Send important updates about your purchase (transactional emails only)
+
+We do NOT use your data for:
+	• Unsolicited marketing (unless you explicitly opt-in)
+	• Selling to third parties
+	• Spam
+
+5. DATA SHARING AND THIRD PARTIES
+Your data may be shared with:
+	• Lemon Squeezy (payment processing, order fulfillment)
+	• Email service providers (to deliver your digital products)
+	• Analytics tools (anonymized data only - e.g., Google Analytics, if used)
+	• Tax authorities (as required by law)
+
+We never sell your personal information to third parties.
+
+6. DATA RETENTION
+We retain your data for:
+	• Transaction records: Up to 7 years (for tax and legal compliance)
+	• Email delivery logs: Up to 12 months
+	• Marketing data: Until you unsubscribe (if you opted in)
+
+7. INTERNATIONAL DATA TRANSFERS
+As we operate globally, your data may be transferred to and processed in countries outside your residence, including the United States (where Lemon Squeezy is based). We ensure appropriate safeguards are in place for such transfers in compliance with GDPR.
+
+8. YOUR RIGHTS (GDPR & CCPA)
+You have the right to:
+	• Access your personal data
+	• Correct inaccurate data
+	• Request deletion (right to be forgotten)*
+	• Restrict or object to processing
+	• Data portability
+	• Withdraw consent
+	• Lodge a complaint with your data protection authority
+
+*Note: We may need to retain certain data for legal and tax obligations.
+
+To exercise these rights, contact us at: adam@kursfluttera.pl
+
+9. COOKIES AND TRACKING
+Our website may use:
+	• Essential cookies (for checkout functionality)
+	• Analytics cookies (Google Analytics, Facebook Pixel, etc.) - with your consent
+	• Marketing cookies (for retargeting) - with your consent
+
+You can manage cookie preferences through your browser settings.
+
+10. SECURITY
+We implement industry-standard security measures to protect your data. However, no method of transmission over the internet is 100% secure. Lemon Squeezy handles all payment data using PCI-DSS compliant infrastructure.
+
+11. CHILDREN'S PRIVACY
+Our services are not directed to individuals under 18 years old. We do not knowingly collect data from minors.
+
+12. CHANGES TO THIS POLICY
+We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last Updated" date. Continued use of our services after changes constitutes acceptance.
+
+13. CONTACT US
+For privacy-related questions or to exercise your rights, contact us at:
+Email: adam@kursfluttera.pl
+Address: ul. Mickiewicza 8/29, 12-200 Pisz, Poland
+
+14. LEMON SQUEEZY PRIVACY
+For details on how Lemon Squeezy processes your payment and billing data, please refer to their privacy policy: https://www.lemonsqueezy.com/privacy
