@@ -802,6 +802,48 @@
             margin-top: 20px;
             opacity: 0.8;
         }
+
+        /* 24-Hour Benefits Box */
+        .cta-24hour-box {
+            max-width: 500px;
+            margin: 30px auto 0;
+            text-align: left;
+            background: rgba(0, 0, 0, 0.15);
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cta-24hour-box p {
+            margin: 0 0 16px 0;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .cta-24hour-box ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .cta-24hour-box li {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 15px;
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .cta-24hour-box li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #10B981;
+            font-weight: 700;
+            font-size: 14px;
+        }
         
         .cta-benefits {
             text-align: left;
@@ -833,9 +875,29 @@
             .cta-box {
                 padding: 60px 50px;
             }
-            
+
             .cta-box .price {
                 font-size: 64px;
+            }
+
+            .cta-24hour-box {
+                padding: 30px;
+                margin: 40px auto 0;
+            }
+
+            .cta-24hour-box p {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+
+            .cta-24hour-box li {
+                font-size: 16px;
+                margin-bottom: 16px;
+                padding-left: 28px;
+            }
+
+            .cta-24hour-box li::before {
+                font-size: 16px;
             }
         }
         
@@ -1789,9 +1851,9 @@
                     </ul>
                 </div>
                 
-                <div style="max-width: 500px; margin: 0 auto; text-align: left; background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                    <p style="margin-bottom: 12px; color: #FFFFFF;"><strong>Within 24 hours, you'll:</strong></p>
-                    <ul style="margin: 0; color: #FFFFFF;">
+                <div class="cta-24hour-box">
+                    <p><strong>Within 24 hours, you'll:</strong></p>
+                    <ul>
                         <li>Understand EXACTLY why your AI content failed</li>
                         <li>Pick ONE alternative method to pursue</li>
                         <li>Have a concrete 30-day action plan</li>
